@@ -6,6 +6,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+        accentColor: Colors.limeAccent,
+      ),
       title: 'Quranic Session',
       home: MainScreen(),
     );

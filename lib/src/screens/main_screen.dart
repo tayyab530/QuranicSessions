@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:quranic_session/src/widgets/session_grid.dart';
+
+import '../widgets/app_drawer.dart';
+import '../widgets/session_grid.dart';
 
 class MainScreen extends StatefulWidget {
+  static const routeName = '/';
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -9,7 +13,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   List<Widget> _tabsScreens = [
     SessionsGrid(),
-    Container(
+    Center(
       child: Text('Favourite Screen'),
     ),
   ];
@@ -19,6 +23,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: Text(_selectedTab == 0 ? 'Available Sessions' : 'Your Session'),
       ),

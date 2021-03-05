@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+
+import 'screens/about_screen.dart';
+import 'screens/settings_screen.dart';
+
 import 'screens/main_screen.dart';
 
 class App extends StatelessWidget {
@@ -11,7 +15,12 @@ class App extends StatelessWidget {
         accentColor: Colors.limeAccent,
       ),
       title: 'Quranic Session',
-      home: MainScreen(),
+      // home: MainScreen(),
+      routes: {
+        MainScreen.routeName: (ctx) => MainScreen(),
+        SettingsScreen.routeName: (ctx)=> SettingsScreen(),
+        AboutScreen.routeName: (ctx)=> AboutScreen(),
+      },
     );
   }
 }

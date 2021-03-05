@@ -33,7 +33,7 @@ class SessionItem extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        title: Spacer(),
+        title: Container(),
         trailing: Row(
           children: [
             Text('${30 - remaining}'),

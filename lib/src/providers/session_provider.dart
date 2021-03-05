@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import '../models/session_model.dart';
 
 class Session with ChangeNotifier {
-  List<SessionItem> _sessions = [
+  List<SessionItem> _sessionItems = [
     SessionItem(
       id: 's1',
       title: 'Shab e Ronaq',
@@ -32,5 +32,6 @@ class Session with ChangeNotifier {
     )
   ];
 
+  List<SessionItem> get sessionItems => _sessionItems;
   
 }

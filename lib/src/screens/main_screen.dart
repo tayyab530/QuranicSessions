@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quranic_session/src/widgets/session_grid.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -7,9 +8,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   List<Widget> _tabsScreens = [
-    Container(
-      child: Text('Session Screen'),
-    ),
+    SessionsGrid(),
     Container(
       child: Text('Favourite Screen'),
     ),

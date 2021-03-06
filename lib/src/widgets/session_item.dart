@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quranic_session/src/providers/my_sessions.dart';
+import 'package:quranic_session/src/providers/session_provider.dart';
 
 class SessionItem extends StatelessWidget {
   final String id;
@@ -31,7 +34,10 @@ class SessionItem extends StatelessWidget {
             Icons.add_outlined,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            var _item = Provider.of<Session>(context,listen: false).findById(id);
+            Provider.of<MySessions>(context,listen: false).addSession(_item);
+          },
         ),
         title: Container(),
         trailing: Row(

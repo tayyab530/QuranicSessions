@@ -33,6 +33,7 @@ class Session with ChangeNotifier {
   ];
 
   List<SessionItem> get sessionItems => _sessionItems;
+  List<SessionItem> get filteredItems => _sessionItems.where((session) => session.remaining < 15).toList();
 
   SessionItem findById(String id){
     return _sessionItems.firstWhere((session) => session.id == id);

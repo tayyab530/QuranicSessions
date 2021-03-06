@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quranic_session/src/widgets/my_session_list.dart';
 
 import '../widgets/app_drawer.dart';
 import '../widgets/session_grid.dart';
@@ -13,9 +14,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   List<Widget> _tabsScreens = [
     SessionsGrid(),
-    Center(
-      child: Text('Favourite Screen'),
-    ),
+    MySessionList(),
   ];
 
   int _selectedTab = 0;

@@ -33,5 +33,9 @@ class Session with ChangeNotifier {
   ];
 
   List<SessionItem> get sessionItems => _sessionItems;
+
+  SessionItem findById(String id){
+    return _sessionItems.firstWhere((session) => session.id == id);
+  }
   
 }

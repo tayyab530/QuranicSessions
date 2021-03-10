@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         title: Text(_selectedTab == 0 ? 'Available Sessions' : 'Your Session'),
         actions: [
-          Filters(applyFilters),
+          _selectedTab == 0 ? Filters(applyFilters) : Container(),
         ],
       ),
       body: _tabsScreens[_selectedTab],
